@@ -47,7 +47,7 @@ module.exports = {
       name: 'storages',
       filename: 'remoteEntry.js',
       exposes: {
-        './Module': 'packages/modules/storages/src/app/remote-entry/entry.module.ts',
+        './Module': 'packages/modules/mf-storages/src/app/remote-entry/entry.module.ts',
       },
       shared: share({
         '@angular/core': {

@@ -1,5 +1,5 @@
 {
-  "name": "@solenopsys/sc-fm-storages-invicta",
+  "name": "@solenopsys/mf-storages",
   "version": "0.9.1",
   "scripts": {
     "test": "node index.js",

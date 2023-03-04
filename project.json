@@ -1,24 +1,24 @@
 {
-  "name": "storages-invicta",
+  "name": "mf-storages",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "packages/modules/storages-invicta/src",
+  "sourceRoot": "packages/modules/mf-storages/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/modules/storages-invicta",
-        "index": "packages/modules/storages-invicta/src/index.html",
-        "main": "packages/modules/storages-invicta/src/main.ts",
-        "polyfills": "packages/modules/storages-invicta/src/polyfills.ts",
-        "tsConfig": "packages/modules/storages-invicta/tsconfig.app.json",
+        "outputPath": "dist/modules/mf-storages",
+        "index": "packages/modules/mf-storages/src/index.html",
+        "main": "packages/modules/mf-storages/src/main.ts",
+        "polyfills": "packages/modules/mf-storages/src/polyfills.ts",
+        "tsConfig": "packages/modules/mf-storages/tsconfig.app.json",
         "assets": [
-          "packages/modules/storages-invicta/src/favicon.ico",
-          "packages/modules/storages-invicta/src/assets"
+          "packages/modules/mf-storages/src/favicon.ico",
+          "packages/modules/mf-storages/src/assets"
         ],
-        "styles": ["packages/modules/storages-invicta/src/styles.scss"],
+        "styles": ["packages/modules/mf-storages/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -37,8 +37,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "packages/modules/storages-invicta/src/environments/environment.ts",
-              "with": "packages/modules/storages-invicta/src/environments/environment.prod.ts"
+              "replace": "packages/modules/mf-storages/src/environments/environment.ts",
+              "with": "packages/modules/mf-storages/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -58,10 +58,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "storages-invicta:build:production"
+          "browserTarget": "storages:build:production"
         },
         "development": {
-          "browserTarget": "storages-invicta:build:development"
+          "browserTarget": "storages:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,15 +69,15 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "storages-invicta:build"
+        "browserTarget": "storages:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "packages/modules/storages-invicta/**/*.ts",
-          "packages/modules/storages-invicta/**/*.html"
+          "packages/modules/mf-storages/**/*.ts",
+          "packages/modules/mf-storages/**/*.html"
         ]
       }
     },
@@ -85,7 +85,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/modules/storages-invicta/jest.config.ts",
+        "jestConfig": "packages/modules/mf-storages/jest.config.ts",
         "passWithNoTests": true
       }
     }
