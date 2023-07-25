@@ -1,15 +1,20 @@
-
 import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-
-import {RouterModule} from '@angular/router';
+import {SystemDiagramComponent} from "./system-diagram/system-diagram.component";
+import {RouterModule} from "@angular/router";
+import {CombinatoricsComponent} from "./combinatorics/combinatorics.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
-  declarations: [],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
-  ],
-  providers: [],
+    declarations: [SystemDiagramComponent, CombinatoricsComponent],
+    imports: [
+        HttpClientModule,
+        RouterModule.forChild([{
+            path: "",
+            component: CombinatoricsComponent,
+        }]),
+    ],
+    providers: [],
 })
-export class RemoteEntryModule {}
+
+export class RemoteEntryModule {
+}

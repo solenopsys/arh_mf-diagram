@@ -1,2 +1,4 @@
-export * from './app/entry.module';
+import {RemoteEntryModule} from "./app/entry.module";
+
+export const MICRO = RemoteEntryModule;
 
