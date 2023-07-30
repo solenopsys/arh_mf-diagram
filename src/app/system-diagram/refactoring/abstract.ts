@@ -28,7 +28,7 @@ export interface Element {
     theme(): Theme
 }
 
-export interface DrawElement {
+export type DrawElement = {
     element: Element
     transform?: { x: number, y: number, angle: number }
 }

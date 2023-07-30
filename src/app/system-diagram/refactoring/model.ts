@@ -1,52 +1,52 @@
-export interface Titles {
+export type Titles = {
     title: string
     description: string
 }
 
 
-export interface HubConf extends Titles{
+export type HubConf = Titles &{
     sideConnectors: number
     skip: number[]
 }
 
-export interface ContactConf {
+export type ContactConf = {
     title: string,
     firstArrow: boolean,
     secondArrow: boolean,
-    width:number,
+    width: number,
 }
 
-export interface TextConf {
+export type TextConf = {
     text: string,
     color: string,
     size: number,
     maxWidth: number,
     maxHeight: number,
-    bold:boolean
+    bold: boolean
 }
 
-export interface TitlesConf extends Titles {
+export type TitlesConf = {
     exWidth: number,
     exHeight: number,
     color: string,
-}
+} & Titles
 
-export interface Point {
+export type Point = {
     x: number,
     y: number,
 }
 
-export interface RectMin {
+export type RectMin = {
     width: number,
     height: number,
 }
 
-export interface RectConf extends RectMin, Point {
+export type RectConf = {
     color: string,
-}
+} & RectMin & Point;
 
 
-export interface PolygonConf{
+export type PolygonConf = {
     points: Point[]
 }
 

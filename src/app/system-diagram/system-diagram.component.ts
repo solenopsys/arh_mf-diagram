@@ -6,7 +6,7 @@ import {HubElement} from "./refactoring/elements/hub";
 import {ModuleElement} from "./refactoring/elements/module";
 import {ModuleSize} from "./refactoring/model";
 
-export interface DiagramConfig {
+export type DiagramConfig = {
     hubs: any[];
     leftIdiModules: any[];
     rightIdiModules: any[];
