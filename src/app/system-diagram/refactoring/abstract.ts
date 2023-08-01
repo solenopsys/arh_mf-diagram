@@ -5,7 +5,6 @@ export function drawItem(ctx: CanvasRenderingContext2D, elementDraw: DrawElement
 
     const transform = elementDraw.transform;
     if (transform) {
-        console.log("DRAW ITEM TRANSFORMED", elementDraw)
         ctx.save();
         const x = transform.x * gridPith;
         const y = transform.y * gridPith;
@@ -15,7 +14,6 @@ export function drawItem(ctx: CanvasRenderingContext2D, elementDraw: DrawElement
         ctx.translate(-x, -y);
         ctx.restore();
     } else {
-        console.log("DRAW ITEM", elementDraw)
         elementDraw.element.draw(ctx)
     }
 }
