@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {BC} from "./test-structure";
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
+import {Observable} from "rxjs";
+import {DiagramConfig} from "../system-diagram/system-diagram.component";
 
 @Component({
   selector: 'combinatorics',
@@ -10,7 +11,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class CombinatoricsComponent implements OnInit{
 
-  $conf:any;
+  $conf:Observable<DiagramConfig>;
   url:string;
 
   constructor(private http:HttpClient,private ar: ActivatedRoute) {
@@ -22,7 +23,7 @@ export class CombinatoricsComponent implements OnInit{
     this.url = this.ar.snapshot.data['url'];
     console.log("URL",this.ar.snapshot.data)
 
-    this.$conf=this.http.get(this.url);
+    this.$conf=this.http.get<DiagramConfig>(this.url);
 
   }
 
